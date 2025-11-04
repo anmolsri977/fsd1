@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width=200px;
+            height = 200px;
+            background-color:red;
+            animation-name:one;
+            animation-duration:4s;
+            position: relative;
+            animation-delay:4s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+            animation-timing-function:cubic-bezier(0.175,0.885,0.32,1,23)
+        }
+        @keyframes one{
+           0% {background-color:red;top=0;left=0}
+           30% {background-color:blue;top=0;right=0}
+           60% {background-color:yellow;bottom=0;right=0}
+           100% {background-color:green;bottom=0;left=0}
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div >
+       
+    </div>
+</body>
+</html>
