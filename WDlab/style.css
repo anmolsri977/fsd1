@@ -1,0 +1,80 @@
+/* BASIC PAGE STYLE */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: #f0f0f0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 10px 20px;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.navbar ul li {
+    margin-left: 15px;
+}
+
+.home {
+    height: 50vh;
+    background: #007bff;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+.home span {
+    color: yellow;
+    font-weight: bold;
+}
+
+
+.about, .projects, .contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+.about p {
+    max-width: 600px;
+    margin: auto;
+}
+
+.project-box {
+    background: white;
+    width: 300px;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.project-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background: #005fcc;
+}
