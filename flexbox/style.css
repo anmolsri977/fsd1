@@ -9,12 +9,13 @@ body{
 .container{
     
 
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3,100px);
     justify-content: center;
     align-items: center;
-    height: 100vh;
     gap: 20px;
+    
 }
 .box{
     width: 100px;
@@ -26,6 +27,6 @@ body{
     border-radius: 10px;
 }
 #box3{
-    background-color: #054427
+    background-color: #054427;
     
 }
