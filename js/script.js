@@ -151,7 +151,7 @@ async function fetchData(){
     try{
     const response=await fetch('https://jsonplaceholder.typicode.com/posts/1');
     const data=await response.json();
-    console.log("Data fetched",data);
+    console.log("Data fetched successfully",data);
     }catch(error){
         console.log("Error:",error);
     }
