@@ -103,7 +103,7 @@ function counter(){
             count--;
             return count;
         },
-        displauy:function(){
+        display:function(){
             let message= ("Current count:"+count);
             return message;
         }
@@ -112,6 +112,7 @@ function counter(){
 const mycounter=counter();
 console.log(mycounter.increment());
 console.log(mycounter.decrement());
+console.log(mycounter.display());
 
 //setTimeout and setInterval
 setTimeout(()=>{
@@ -119,7 +120,7 @@ setTimeout(()=>{
 },2000);
 
 const timerId= setInterval(()=>{
-    console.log("This message is shown every 3 seconds");
+    console.log("This message is after shown every 3 seconds");
 },3000);
 
 setTimeout(()=>{
