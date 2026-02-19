@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="task">
+    <button onclick="add()">Add Task</button>
+    <ul id="list"></ul>
+    <script>
+        let task = [];
+        function add(){
+            task.push(task.value);
+            task.value="";
+            show();
+        }
+        function show(){
+            list.innerHTML="";
+            for(let i=0;i<task.length;i++){
+                list.innerHTML+=`<li>${task[i]}</li>`;
+            }
+        }
+    </script>
+</body>
+</html>
