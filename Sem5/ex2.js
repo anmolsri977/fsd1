@@ -4,4 +4,4 @@ function sum(a,b){
 console.log("sum=",sum(20,40))
 
 const sum=(a,b)=>a+b;
-console.log(sum(43));
+console.log(sum(43,32));
