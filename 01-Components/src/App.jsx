@@ -1,16 +1,32 @@
-import Header from './Header'
-import Footer from './Footer'
-import Greeting from './Greeting'
+import Heading from './Heading';
+import Footer from './Footer';
+import './App.css'
+import { useState } from 'react';
+import { useEffect } from 'react';
 function App(){
-  return <>
-    <Header />
-    <Greeting name="Anmol" age={21} />
-    <Greeting name="Alice" age={25} />
-    <Greeting name="Bob" age={30} />
-    <h1>Hello Anmol</h1>
-    <p>Welcome to the First React Project</p>
-    <Footer />
-  </>
+  const [isDark, setIsDark]=useState(true);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+  };
+
+  useEffect(()=>{
+    if(isDark){
+      document.body.style.backgroundColor="black";
+      document.body.style.color="white";
+    }
+    else{
+      document.body.style.backgroundColor="white";
+      document.body.style.color="black";
+    }
+  },[isDark])
+  return (
+    <div>
+      <Heading />
+      <button onClick={toggleTheme}>Click Me</button>
+      <Footer />
+    </div>
+  )
 }
 
 export default App;
