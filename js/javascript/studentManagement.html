@@ -21,7 +21,18 @@
         let gradeMap=new Map();//map
         function addStudent(){
             try{
-                
+                //debugging
+                debugger;
+                const name=document.getElementById("Name").value;
+                const email=document.getElementById("email").value;
+                const marks=Number(document.getElementById("marks").value);
+
+                //@ validation in email
+                const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(!emailPattern.test(email)){
+                    throw new Error("Invalid email format");
+                }
+
             }
         }
     </script>
