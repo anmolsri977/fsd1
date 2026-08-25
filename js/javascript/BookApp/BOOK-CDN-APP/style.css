@@ -1,0 +1,18 @@
+#root{
+    display: flex;
+}
+.bookStore{
+    display:flex;
+    flex-wrap:wrap;
+    row-gap:10px;
+
+}
+.book{
+    width: 200px;
+    height:200px;
+    margin: auto;
+    padding: 10px;
+    background-color:aqua;
+    border: 1px solid #ccc;
+    text-align: center;
+}
