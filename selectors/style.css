@@ -1,0 +1,44 @@
+/*#box{
+    background-color: rgb(0, 0,255);
+    color: white;
+}
+.heading{
+    color: rgb(255, 0, 0);
+    
+}
+p{
+    color: rgb(255, 255, 0);
+     font-size: 20px;
+}*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: rgb(0, 0,255);
+    color: white;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+}
+.container2{
+    background-color: rgb(0, 255,0);
+    color: white;
+   /*width: 100px;*/
+   width: scrollbar;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+}
+.container3{
+    background-color: rgb(255, 0,0);
+    color: white;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+}

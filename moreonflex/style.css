@@ -1,0 +1,49 @@
+.container {
+    display: flex;    
+    gap: 15px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.box1, .box2, .box3, .box4 {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Generic boxes used by the demo page */
+.box {
+    width: 180px;
+    height: 140px;
+    border: 4px solid #000; /* default black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background: #fafafa;
+}
+
+
+
+.box1 {
+    background-color: lightcoral;
+}
+
+.box2 {
+    background-color: lightgreen;
+}
+
+.box3 {
+    background-color: lightblue;
+}
+
+.box4 {
+    background-color: khaki;
+}

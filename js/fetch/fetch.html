@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Fetch</title>
+    <style>
+        table{
+            width:80vw;
+            background-color: bisque;
+            border:2px solid black collapse;
+        }
+        th,td{
+            border:2px solid black;
+            padding:10px;
+            text-align:center;
+        }
+    </style>
+    <script>
+        let rate=0;
+        let products=[];
+        let cart=[];
+        async function loadProduct(){
+            const URL="https://dummyjson.com/products?limit=10&skip=5";
+            try{
+                const res= await fetch(URL);
+                console.log(res);
+                const data=await res.json();
+                console.log(data.products);
+                products=data.products;
+                let rows="";
+                data.products.map((i,index)=>(
+                    rows=rows+`
+                    <tr>
+                        <td>${index+1}</td>
+                        <td>${i.title}</td>
+                        <td><img src="${i.images[0]}" width="50px" height="50px"/></td>
+                        <td>${i.category}</td>
+                        <td>${i.rating}</td>
+                        <td>${(i.price*rate).toFixed(2)}</td>
+                        <td>${i.stock}</td>
+                        <td><button onclick="addToCart(${i.id})">Add to cart</button></td>
+                    </tr> `
+                    
+                ))
+                    const el=document.getElementById("data");
+                    el.innerHTML=rows;
+            }
+
+            catch(err){
+                console.log(err);
+            }
+        }
+        function addToCart(id){
+            const selectedProduct=products.find((item)=>item.id===id);
+            if(selectedProduct){
+                cart.push(selectedProduct);
+                console.log("Product added to cart:",selectedProduct);
+                console.log("Current cart:",cart);
+            }
+        }
+        async function getRate(){
+            const URL="https://open.er-api.com/v6/latest/USD";
+            try{
+                const res=await fetch(URL);
+                const rate=await res.json();
+                console.log("INRrate=",rate.rates.INR);
+                return rate.rates.INR;
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+        function ShowCart(){
+            let rows="";
+            cart.map((i,index)=>(
+                rows=rows+`
+                <tr>
+                    <td>${index+1}</td>
+                    <td>${i.title}</td>
+                    <td><img src="${i.images[0]}" width="50px" height="50px"/></td>
+                    <td>${i.category}</td>
+                    <td>${i.rating}</td>
+                    <td>${(i.price*rate).toFixed(2)}</td>
+                    <td>${i.stock}</td>
+                </tr> `
+                
+            ))
+                const el=document.getElementById("data");
+                el.innerHTML=rows;
+        }
+        const test=async()=>{
+        rate=await getRate();
+        console.log(rate);
+        }
+        test();
+        loadProduct();
+    </script>
+</head>
+<body>
+    <h1>
+        <center>List Of Products</center>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>S.NO</th>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Category</th>
+                    <th>Rating</th>
+                    <th>Price (INR)</th>
+                    <th>Stock</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+        <button onclick="ShowCart()">Show Cart</button>
+    </h1>
+</body>
+</html>

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #bb3030;
+}
+.container{
+    
+
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3,100px);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #f3ef20;
+   
+    border: white 2px solid;
+   
+    border-radius: 10px;
+}
+#box3{
+    background-color: #054427;
+    
+}
