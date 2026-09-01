@@ -1,0 +1,12 @@
+{
+  "name": "book-npm-app",
+  "version": "1.0.0",
+  "description": "Fisrt Book App",
+  "license": "ISC",
+  "author": "Anmol",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
